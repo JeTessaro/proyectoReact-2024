@@ -18,28 +18,17 @@ const Carrito = () => {
         return Object.values(productosCantidad);
     }
 
-    const aumentarCantidad = (producto) => {
-        console.log('Aumentando cantidad de producto:', producto);
-        actualizarCantidad(producto.id, producto.cantidad + 1);
-    }
-
-    const disminuirCantidad = (producto) => {
-        if (producto.cantidad > 1) {
-            console.log('Disminuyendo cantidad de producto:', producto);
-            actualizarCantidad(producto.id, producto.cantidad - 1);
-        }
-    }
-
     return (
         <div className="cart-contenedor">
         {acumuladorProductosIguales().map((prod) => {
+             console.log(prod);
             return (
                 <Fragment key={prod.id}>
                     <div className="cart-item">
-                        <img src={prod.imagen} alt={prod.titulo} className="cart-item-imagen" />
+                        <img src={prod.img} alt={prod.imagen} className="cart-item-imagen" />
                         <div className="cart-item-detalles">
                             <h2 className="cart-item-titulo">{prod.titulo}</h2>
-                            <p className="cart-item-titulo">${prod.descripcion}</p>
+                            <p className="cart-item-titulo">{prod.descripcion}</p>
                             <p className="cart-item-precio">${prod.precio}</p>
                             <div className="cart-item-acciones">                               
                                 <p className="cart-item-cantidad">Cantidad: {prod.cantidad}</p>                                
@@ -50,7 +39,7 @@ const Carrito = () => {
                 </Fragment>
             )
         })}
-    
+   
         <div className="cart-total-acciones">
             <div className="cart-total">
                 <h3>Total: ${calcularTotal().toFixed(2)}</h3>
