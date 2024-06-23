@@ -94,3 +94,135 @@ footer {
     position: sticky;
     bottom: 0;
 }
+
+/* Carrito */
+
+.cart-contenedor {
+  padding: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-item-imagen {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.cart-item-detalles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.cart-item-titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cart-item-precio {
+  font-size: 1rem;
+  color: #666;
+}
+
+.cart-item-acciones {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-button {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.cart-item-button:hover {
+  background-color: #e1e1e1;
+}
+
+.cart-total-acciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.cart-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart-acciones {
+  display: flex;
+}
+
+.cart-button-accion {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.cart-button-accion:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilos para el botón de Vaciar carrito */
+.cart-vaciar {
+  background-color: #f44336; /* Color rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-vaciar:hover {
+  background-color: #c62828; /* Color rojo más oscuro al pasar el mouse */
+}
+
+/* Estilos para el botón de Finalizar compra */
+.cart-finalizar {
+  background-color: #4CAF50; /* Color verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-finalizar:hover {
+  background-color: #388E3C; /* Color verde más oscuro al pasar el mouse */
+}
