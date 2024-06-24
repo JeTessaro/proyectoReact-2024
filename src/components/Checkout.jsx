@@ -41,30 +41,30 @@ const Checkout = () => {
   }
 
   return (
-    <div className="checkout-container">
+    <div className="checkout-contenedor">
       <h1>Finalizar Compra</h1>
       <form onSubmit={handleSubmit(comprar)} className="checkout-form">
-        <div className="form-group">
+        <div className="form-campo">
           <label htmlFor="nombre">Nombre:</label>
           <input type="text" id="nombre" {...register('nombre', { required: true })} />
         </div>
-        <div className="form-group">
+        <div className="form-campo">
           <label htmlFor="apellido">Apellido:</label>
           <input type="text" id="apellido" {...register('apellido', { required: true })} />
         </div>
-        <div className="form-group">
+        <div className="form-campo">
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" {...register('email', { required: true })} />
         </div>
-        <div className="form-group">
+        <div className="form-campo">
           <label htmlFor="telefono">Teléfono:</label>
           <input type="tel" id="telefono" {...register('telefono', { required: true })} />
         </div>
-        <div className="form-group">
+        <div className="form-campo">
           <label htmlFor="cantidad">Cantidad de items:</label>
           <input type="number" id="cantidad" value={carrito.length} disabled />
         </div>
-        <div className="form-group">
+        <div className="form-campo">
           <label htmlFor="total">Total de la orden:</label>
           <input type="number" id="total" value={calcularTotal().toFixed(2)} disabled />
         </div>
